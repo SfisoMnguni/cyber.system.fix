@@ -12,15 +12,19 @@ Is your Windows machine failing to boot with errors like "Boot Device Not Found"
 
 First if you encounter issue like this: A blue screen of death.
 !<img width="1359" height="1006" alt="image" src="https://github.com/user-attachments/assets/dd331c61-082e-4227-ad9b-6daabb93f202" />
+![Description 1](https://github.com/user-attachments/assets/dd331c61-082e-4227-ad9b-6daabb93f202)
 
 #**Preparing for Repair: Creating a Windows Install USB**
 First, I accessed Windows recovery tools when the recovery partition is inaccessible, a Windows install USB is required. 
 Within the tool, I accept the user agreement, selected the option to "Create installation media", chose "USB flash drive", and followed the prompts to complete the process.
 !<img width="1749" height="507" alt="image" src="https://github.com/user-attachments/assets/9a6af69d-7841-43b6-8b89-0249c0af256d" />
+![Description 2](https://github.com/user-attachments/assets/37fb6f73-bbb4-4709-873d-3a94c5b0c778)
 
 I backed up the user BCD (Boot Configuration Data) file by using Command Prompt.
 !<img width="1452" height="617" alt="image" src="https://github.com/user-attachments/assets/37fb6f73-bbb4-4709-873d-3a94c5b0c778" />
+![Description 3](https://github.com/user-attachments/assets/37fb6f73-bbb4-4709-873d-3a94c5b0c778)
 !<img width="1459" height="514" alt="image" src="https://github.com/user-attachments/assets/add2edb9-505c-49cd-b005-630e3425f278" />
+![Description 4](https://github.com/user-attachments/assets/add2edb9-505c-49cd-b005-630e3425f278)
 
 *Inside Command Prompt, I useD DiskPart to assign a drive letter to the UEFI partition, which typically lacks one*
 Typed diskpart, then list disk to identify Windows installation disk (usually a GPT partition)....
@@ -31,6 +35,9 @@ Typed exit to leave DiskPart...
 Navigated to the assigned UEFI drive (e.g., T:) and confirmed the presence of EFI, Microsoft, and Boot directories....
 Formatted the UEFI partition by typing format [UEFI_drive_letter]: /FS:FAT32 (e.g., format T: /FS:FAT32) and confirm the data destruction....
 
+
+
+![Description 3](https://github.com/user-attachments/assets/37fb6f73-bbb4-4709-873d-3a94c5b0c778)
 
 
 
